@@ -2,9 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 120 120">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="50%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#06B6D4"/>
+      <stop offset="0%" stop-color="#E34B3C"/>
+      <stop offset="50%" stop-color="#B83228"/>
+      <stop offset="100%" stop-color="#922B24"/>
     </linearGradient>
     <style>
       .brand { font: 700 16px system-ui, sans-serif; fill: #fff; }
@@ -31,5 +31,5 @@
   <polygon points="28,50 46,60 28,70" fill="url(#g)"/>
 
   <!-- Brand Text -->
-  <text class="brand" x="60" y="65">SRH</text>
+  <text class="brand" x="64" y="65">CC</text>
 </svg>

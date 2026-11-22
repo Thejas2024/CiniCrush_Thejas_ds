@@ -9,7 +9,7 @@ const Footer = () => {
             <img alt="" class="h-11" src={assets.logo} className="w-40 md:w-75 h-auto"/>
             <p className="mt-6 text-sm">
               Book your favorite movies, shows, and events in just a few taps. 
-              SRH CinePass brings you seamless ticket booking, exclusive offers, 
+              CiniCrush brings you seamless ticket booking, exclusive offers,
               and the ultimate cinema experience — all in one app.
             </p>
             <div className="flex items-center gap-2 mt-4">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="pt-4 text-center text-sm pb-5">
-          Copyright {new Date().getFullYear()} © SRH CinePass. All Right Reserved.
+          Copyright {new Date().getFullYear()} © CiniCrush. All Rights Reserved.
         </p>
       </footer>
   )

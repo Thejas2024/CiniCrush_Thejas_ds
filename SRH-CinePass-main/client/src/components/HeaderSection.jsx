@@ -13,7 +13,7 @@ const HeaderSection = () => {
       bg-cover bg-center h-screen'>
 
             <h1 className='text-5xl md:text-[70px] md:leading-[4.5rem] font-semibold max-w-110 mt-20'>
-                Welcome to CinePass
+                Welcome to CiniCrush
             </h1>
             <h2 className='text-2xl md:text-1xl text-primary font-semibold'>Your Movie, Your Time, Your Seat</h2>
             <div className='flex items-center gap-4 text-gray-300'>
