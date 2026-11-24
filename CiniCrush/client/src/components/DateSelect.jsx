@@ -15,7 +15,8 @@ const DateSelect = ({dateTime,id}) => {
         if (!selectedDate) {
             return toast.error("Please select a date to proceed with booking.");
         } 
-        navigate(`/movies/${id}/${selectedDate}`);
+        const theaterSearch = new URLSearchParams({ movie: id, date: selectedDate });
+        navigate(`/theaters?${theaterSearch.toString()}`);
         scrollTo(0,0);
         
     };

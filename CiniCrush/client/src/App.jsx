@@ -14,6 +14,7 @@ import Dashboard from './pages/Admin/Dashboard'
 import ListShows from './pages/Admin/ListShows'
 import ListofBookings from './pages/Admin/ListofBookings'
 import AddShows from './pages/Admin/AddShows'
+import Theaters from './pages/theaters'
 
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
+        <Route path="/theaters" element={<Theaters />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/My-Bookings" element={<MyBookings />} />
         <Route path="/movies/:id/:date" element={<SeatLayout />} />

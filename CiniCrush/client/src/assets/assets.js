@@ -338,3 +338,194 @@ export const dummyBookingData = [
         "isPaid": true,
     },
 ]
+
+export const theatersData = {
+  "theaters": [
+    {
+      "id": "TH001",
+      "name": "PVR Orion Mall",
+      "location": "Rajajinagar",
+      "city": "Bengaluru",
+      "address": "Orion Mall, Brigade Gateway, Rajajinagar, Bengaluru",
+      "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
+      "rating": 4.5,
+      "distance": "5.2 km",
+      "facilities": ["Parking", "Food & Beverages", "Dolby Atmos", "Recliner Seats"],
+      "screens": [
+        {
+          "screenId": "S1",
+          "screenName": "Screen 1",
+          "screenType": "IMAX",
+          "totalSeats": 250,
+          "availableSeats": 120,
+          "showTimes": ["10:00 AM", "1:30 PM", "6:00 PM", "9:30 PM"],
+          "ticketPrice": 250
+        },
+        {
+          "screenId": "S2",
+          "screenName": "Screen 2",
+          "screenType": "2D",
+          "totalSeats": 180,
+          "availableSeats": 85,
+          "showTimes": ["11:00 AM", "2:30 PM", "7:00 PM", "10:15 PM"],
+          "ticketPrice": 180
+        }
+      ]
+    },
+    {
+      "id": "TH002",
+      "name": "INOX Garuda Mall",
+      "location": "Magrath Road",
+      "city": "Bengaluru",
+      "address": "Garuda Mall, Magrath Road, Bengaluru",
+      "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26",
+      "rating": 4.3,
+      "distance": "3.1 km",
+      "facilities": ["Parking", "Food & Beverages", "Dolby Sound", "Online Booking"],
+      "screens": [
+        {
+          "screenId": "S1",
+          "screenName": "Screen 1",
+          "screenType": "2D",
+          "totalSeats": 200,
+          "availableSeats": 95,
+          "showTimes": ["9:45 AM", "12:45 PM", "4:15 PM", "8:00 PM"],
+          "ticketPrice": 200
+        },
+        {
+          "screenId": "S2",
+          "screenName": "Screen 2",
+          "screenType": "3D",
+          "totalSeats": 150,
+          "availableSeats": 60,
+          "showTimes": ["10:30 AM", "2:00 PM", "5:30 PM", "9:00 PM"],
+          "ticketPrice": 280
+        }
+      ]
+    },
+    {
+      "id": "TH003",
+      "name": "Cinepolis Forum Mall",
+      "location": "Koramangala",
+      "city": "Bengaluru",
+      "address": "Forum Mall, Koramangala, Bengaluru",
+      "image": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c",
+      "rating": 4.4,
+      "distance": "6.8 km",
+      "facilities": ["Parking", "Premium Seating", "Food Court", "Dolby Atmos"],
+      "screens": [
+        {
+          "screenId": "S1",
+          "screenName": "Screen 1",
+          "screenType": "2D",
+          "totalSeats": 220,
+          "availableSeats": 110,
+          "showTimes": ["10:00 AM", "1:00 PM", "4:30 PM", "7:30 PM"],
+          "ticketPrice": 220
+        },
+        {
+          "screenId": "S2",
+          "screenName": "Screen 2",
+          "screenType": "VIP",
+          "totalSeats": 100,
+          "availableSeats": 45,
+          "showTimes": ["11:30 AM", "3:00 PM", "6:30 PM", "10:00 PM"],
+          "ticketPrice": 350
+        }
+      ]
+    },
+    {
+      "id": "TH004",
+      "name": "PVR Vega City",
+      "location": "Bannerghatta Road",
+      "city": "Bengaluru",
+      "address": "Vega City Mall, Bannerghatta Road, Bengaluru",
+      "image": "https://images.unsplash.com/photo-1440404653325-ab127d49abc1",
+      "rating": 4.2,
+      "distance": "8.5 km",
+      "facilities": ["Parking", "Food & Beverages", "Recliner Seats", "3D"],
+      "screens": [
+        {
+          "screenId": "S1",
+          "screenName": "Screen 1",
+          "screenType": "2D",
+          "totalSeats": 190,
+          "availableSeats": 75,
+          "showTimes": ["9:30 AM", "12:30 PM", "3:45 PM", "7:15 PM"],
+          "ticketPrice": 180
+        },
+        {
+          "screenId": "S2",
+          "screenName": "Screen 2",
+          "screenType": "3D",
+          "totalSeats": 160,
+          "availableSeats": 80,
+          "showTimes": ["10:15 AM", "1:45 PM", "5:15 PM", "9:15 PM"],
+          "ticketPrice": 260
+        }
+      ]
+    },
+    {
+      "id": "TH005",
+      "name": "Gopalan Cinemas",
+      "location": "Old Madras Road",
+      "city": "Bengaluru",
+      "address": "Gopalan Mall, Old Madras Road, Bengaluru",
+      "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
+      "rating": 4.1,
+      "distance": "9.2 km",
+      "facilities": ["Parking", "Food & Beverages", "Dolby Sound"],
+      "screens": [
+        {
+          "screenId": "S1",
+          "screenName": "Screen 1",
+          "screenType": "2D",
+          "totalSeats": 170,
+          "availableSeats": 100,
+          "showTimes": ["10:00 AM", "1:15 PM", "4:45 PM", "8:30 PM"],
+          "ticketPrice": 160
+        },
+        {
+          "screenId": "S2",
+          "screenName": "Screen 2",
+          "screenType": "2D",
+          "totalSeats": 140,
+          "availableSeats": 55,
+          "showTimes": ["11:00 AM", "2:15 PM", "5:45 PM", "9:30 PM"],
+          "ticketPrice": 150
+        }
+      ]
+    },
+    {
+      "id": "TH006",
+      "name": "Cinepolis Nexus Shantiniketan",
+      "location": "Whitefield",
+      "city": "Bengaluru",
+      "address": "Nexus Shantiniketan Mall, Whitefield, Bengaluru",
+      "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
+      "rating": 4.6,
+      "distance": "15.4 km",
+      "facilities": ["Parking", "Dolby Atmos", "Premium Seats", "Food & Beverages"],
+      "screens": [
+        {
+          "screenId": "S1",
+          "screenName": "Screen 1",
+          "screenType": "2D",
+          "totalSeats": 210,
+          "availableSeats": 130,
+          "showTimes": ["9:45 AM", "12:45 PM", "4:00 PM", "7:45 PM"],
+          "ticketPrice": 210
+        },
+        {
+          "screenId": "S2",
+          "screenName": "Screen 2",
+          "screenType": "IMAX",
+          "totalSeats": 280,
+          "availableSeats": 90,
+          "showTimes": ["10:30 AM", "2:00 PM", "5:45 PM", "9:30 PM"],
+          "ticketPrice": 320
+        }
+      ]
+    }
+  ]
+} 

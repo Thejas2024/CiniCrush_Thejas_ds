@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import { dummyDateTimeData, dummyShowsData } from '../assets/assets'
 import Loading from '../components/Loading'
 import { ArrowRightIcon, ClockIcon } from 'lucide-react'
@@ -15,7 +15,12 @@ const SeatLayout = () => {
   ['M', 'N', 'O',], ['P', 'Q',], ['R', 'S']]
 
 
-  const { id } = useParams()
+  const { id, date } = useParams()
+  const [searchParams] = useSearchParams()
+  const requestedTime = searchParams.get('time')
+  const theaterName = searchParams.get('theater')
+  const screenName = searchParams.get('screen')
+  const ticketPrice = searchParams.get('price')
   const [selectedSeats, setSelectedSeats] = useState([])
   const [selectedTime, setSelectedTime] = useState(null)
   const [selectedDate, setSelectedDate] = useState(null)   // ✅ added for date
@@ -26,12 +31,31 @@ const SeatLayout = () => {
   const GetShow = async () => {
     const Show = dummyShowsData.find(show => show._id === id)
     if (Show) {
-      const firstDate = Object.keys(dummyDateTimeData)[0]   // ✅ pick first date
+      const firstDate = Object.keys(dummyDateTimeData)[0]
+      const showDate = date || firstDate
+
+      if (requestedTime) {
+        setShow({
+          movie: Show,
+          dateTime: {
+            [showDate]: [{ time: requestedTime, showId: `${id}-${showDate}` }]
+          },
+          theater: {
+            name: theaterName,
+            screen: screenName,
+            price: ticketPrice,
+          },
+        })
+        setSelectedDate(showDate)
+        setSelectedTime(requestedTime)
+        return
+      }
+
       setShow({
         movie: Show,
         dateTime: dummyDateTimeData
       })
-      setSelectedDate(firstDate)   // ✅ set default selected date
+      setSelectedDate(dummyDateTimeData[showDate] ? showDate : firstDate)
     }
   }
 
@@ -70,13 +94,22 @@ const SeatLayout = () => {
 
   useEffect(() => {
     GetShow()
-  }, [id])
+  }, [id, date, requestedTime, theaterName, screenName, ticketPrice])
 
   return show ? (
     <div className='flex flex-col md:flex-row px-6 md:px-16 lg:px-40 py-30 md:pt-50'>
       {/* Available Timings */}
       <div className='w-60 bg-gradient-to-r from-[#721b32] to-primary-dull rounded-lg py-10 h-max md:sticky md:top-30'>
-        <p className='text-lg font-semibold px-6'>Available Timings</p>
+        <p className='text-lg font-semibold px-6'>
+          {show.theater ? 'Selected Show' : 'Available Timings'}
+        </p>
+        {show.theater && (
+          <div className="px-6 pt-3 text-sm text-white/75">
+            <p>{show.theater.name}</p>
+            <p className="mt-1 text-xs text-white/55">{show.theater.screen}</p>
+            {show.theater.price && <p className="mt-1 text-xs text-white/55">₹{show.theater.price} per ticket</p>}
+          </div>
+        )}
         <div className='mt-5 space-y-1'>
           {show.dateTime[selectedDate].map((item) => (
             <div
@@ -87,7 +120,7 @@ const SeatLayout = () => {
                   : 'bg-gradient-to-r from-[#451b19] to-[#5c211d] hover:from-primary-dull hover:to-primary-hover'
                 }`} onClick={() => setSelectedTime(item.time)} >
               <ClockIcon className='w-4 h-4' />
-              <p className='text-sm'>{isoTimeFormat(item.time)}</p>
+              <p className='text-sm'>{show.theater ? item.time : isoTimeFormat(item.time)}</p>
             </div>
           ))}
         </div>

@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React from 'react'
 import { CalendarIcon, ClockIcon, ArrowRight } from 'lucide-react'
 import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
@@ -36,13 +36,20 @@ const HeaderSection = () => {
                 Don’t miss the thrill—book your tickets early and enjoy the magic of cinema with a lively crowd near you!
             </p>
 
-            <button onClick={() => navigate('/movies')} className='flex items-center gap-1 
-                px-6 py-3 text-sm bg-gradient-to-r from-primary to-primary-dull
-                hover:from-primary-dull hover:to-primary-hover transition rounded-full
-             font-medium cursor-pointer'>
-                Explore Movies
-                <ArrowRight className='w-5 h-5' />
-            </button>
+            <div className="flex flex-wrap gap-3">
+                <button onClick={() => navigate('/theaters')} className='flex items-center gap-1
+                    px-6 py-3 text-sm bg-gradient-to-r from-primary to-primary-dull
+                    hover:from-primary-dull hover:to-primary-hover transition rounded-full
+                 font-medium cursor-pointer'>
+                    Book Now
+                    <ArrowRight className='w-5 h-5' />
+                </button>
+                <button onClick={() => navigate('/movies')} className='flex items-center gap-1
+                    px-6 py-3 text-sm border border-white/30 hover:bg-white/10 transition rounded-full
+                 font-medium cursor-pointer'>
+                    Explore Movies
+                </button>
+            </div>
 
         </div>
     )
